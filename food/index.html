@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebsite - Food</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .food-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('../assets/images/background_resto.jpg') no-repeat center center / cover;
+            z-index: -2;
+        }
+
+        .food-bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .food-container {
+            min-height: calc(100vh - 56px);
+        }
+
+        .glass-wrapper {
+            background: rgba(42, 32, 22, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 220, 180, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .food-card {
+            background: rgba(28, 20, 14, 0.65);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .food-img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+
+        .food-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .food-icon-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="food-bg"></div>
+    <div class="food-bg-overlay"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold fs-4" href="../">MyWebsite</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../profile/">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../hometown/">Hometown</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white" href="./">Food</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../tourist/">Tourist</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="food-container d-flex align-items-center justify-content-center py-5">
+        <div class="container" style="max-width: 1000px;">
+
+            <div class="glass-wrapper p-4 p-md-5">
+                <h1 class="fw-bold mb-4 text-white fs-2">Bite Into South Tangerang</h1>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="food-card p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="food-icon-badge">
+                                        <i class="bi bi-shop text-white fs-6"></i>
+                                    </span>
+                                    <h3 class="fw-bold mb-0 text-white fs-4">Sayur Besan</h3>
+                                </div>
+                                <p class="text-white-50 small mb-3">
+                                    A traditional Betawi dish native to South Tangerang featuring a unique yellow
+                                    coconut milk soup made with terubuk (sugarcane flower) as its main ingredient,
+                                    traditionally served at formal wedding ceremonies.
+                                </p>
+                            </div>
+                            <div class="food-img-wrapper mt-auto">
+                                <img src="../assets/images/Sayur_Besan.jpg" alt="Sayur Besan" class="shadow-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="food-card p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="food-icon-badge">
+                                        <i class="bi bi-shop text-white fs-6"></i>
+                                    </span>
+                                    <h3 class="fw-bold mb-0 text-white fs-4">Laksa Tangerang Selatan</h3>
+                                </div>
+                                <p class="text-white-50 small mb-3">
+                                    A rice noodle dish served in a rich, spiced yellow coconut broth, uniquely topped
+                                    with boiled mung beans, toasted grated coconut, and free-range chicken.
+                                </p>
+                            </div>
+                            <div class="food-img-wrapper mt-auto">
+                                <img src="../assets/images/Laksa.jpeg" alt="Laksa Tangerang Selatan" class="shadow-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebsite - Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 520px;
+            background: url('assets/images/tagsel-bsd.jpg') no-repeat center center / cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #ffffff;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.45) 60%, rgba(15, 23, 42, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .location-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.75rem;
+        }
+
+        .badge-welcome {
+            background-color: #ffc107;
+            color: #000000;
+            font-weight: 700;
+            padding: 0.35em 0.8em;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+
+        .wave-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 2;
+        }
+
+        .wave-container svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 70px;
+        }
+
+        .cards-section {
+            background-color: #eef2f5;
+            padding-bottom: 5rem;
+        }
+
+        .nav-icon-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 1.25rem;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 140px;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-card {
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            padding: 0.5rem 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark hero-content pt-3">
+            <div class="container px-4">
+                <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="./">
+                    <i class="bi bi-geo-alt-fill text-primary"></i> MyWebsite
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active fw-semibold text-white" href="./">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="./profile/">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="./hometown/">Hometown</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="./food/">Food</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="./tourist/">Tourist</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container hero-content py-5 my-auto px-4">
+            <div style="max-width: 600px;">
+                <div class="location-tag">
+                    <i class="bi bi-geo-alt"></i> South Tangerang, Indonesia
+                </div>
+                <div class="mb-2">
+                    <span class="badge-welcome">Hi, I'm Gede Nararya Vatsa</span>
+                </div>
+                <h1 class="display-4 fw-bold mb-3">Welcome to My Personal Space</h1>
+                <p class="lead text-white-50 fs-6 mb-0" style="max-width: 520px;">
+                    Explore my background, hometown insights, local culinary highlights, and top tourist destinations.
+                </p>
+            </div>
+        </div>
+
+        <div class="wave-container">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,50 L1200,120 L0,120 Z" fill="#eef2f5"></path>
+            </svg>
+        </div>
+    </div>
+
+    <section id="explore" class="cards-section pt-2">
+        <div class="container px-4">
+
+            <div class="text-center mb-5">
+                <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm p-2 mb-2"
+                    style="width: 42px; height: 42px;">
+                    <i class="bi bi-compass text-primary fs-5"></i>
+                </div>
+                <h2 class="fw-bold text-dark fs-2 mb-1">Explore Pages</h2>
+                <p class="text-secondary small">Discover more about me and my hometown through different sections.</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card-custom h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/foto-profil.jpg" alt="Profile">
+                            </div>
+                            <div class="p-3">
+                                <div class="nav-icon-badge bg-primary">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                                <h5 class="fw-bold text-dark mb-2">Profile</h5>
+                                <p class="text-secondary small mb-0">
+                                    Learn more about my educational background and technical skills.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0">
+                            <a href="./profile/" class="btn btn-primary btn-card w-100 justify-content-center">
+                                View Profile <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card-custom h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/Foto-3-Pengembangan-BSD-City.jpg" alt="Hometown">
+                            </div>
+                            <div class="p-3">
+                                <div class="nav-icon-badge bg-info">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <h5 class="fw-bold text-dark mb-2">Hometown</h5>
+                                <p class="text-secondary small mb-0">
+                                    Discover South Tangerang, a vibrant modern satellite city.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0">
+                            <a href="./hometown/" class="btn btn-info text-white btn-card w-100 justify-content-center">
+                                Explore City <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card-custom h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/Laksa.jpeg" alt="Food">
+                            </div>
+                            <div class="p-3">
+                                <div class="nav-icon-badge bg-warning">
+                                    <i class="bi bi-shop"></i>
+                                </div>
+                                <h5 class="fw-bold text-dark mb-2">Food</h5>
+                                <p class="text-secondary small mb-0">
+                                    Explore unique local authentic culinary dishes and traditional flavors.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0">
+                            <a href="./food/" class="btn btn-warning text-white btn-card w-100 justify-content-center">
+                                See Culinary <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card-custom h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/Ocean park.jpg" alt="Tourist">
+                            </div>
+                            <div class="p-3">
+                                <div class="nav-icon-badge bg-success">
+                                    <i class="bi bi-camera-fill"></i>
+                                </div>
+                                <h5 class="fw-bold text-dark mb-2">Tourist</h5>
+                                <p class="text-secondary small mb-0">
+                                    Check out iconic destinations and popular places to visit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-0">
+                            <a href="./tourist/" class="btn btn-success btn-card w-100 justify-content-center">
+                                View Spots <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5 pt-3">
+                <p class="fst-italic text-muted small mb-0">Small City, Big Stories</p>
+                <i class="bi bi-geo-alt text-muted small"></i>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

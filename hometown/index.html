@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebsite - Hometown</title>
+    <link rel="preload" as="image" href="../assets/images/ikon-kota-Tangerang-mobile.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .profile-bg-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .profile-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .profile-slide.active {
+            opacity: 1 !important;
+            transition: none;
+        }
+
+        .profile-slide.fading {
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide-img,
+        .slide-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        .slide-blur {
+            filter: blur(15px);
+            transform: scale(1.05);
+        }
+
+        .profile-bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .profile-container {
+            min-height: calc(100vh - 56px);
+        }
+
+        .profile-card {
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: background-color 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease;
+            border-radius: 1.25rem;
+        }
+
+        .theme-ikon {
+            background-color: rgba(230, 245, 250, 0.88) !important;
+            border: 1px solid rgba(160, 210, 235, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(0, 80, 120, 0.2) !important;
+        }
+
+        .theme-tangsel1 {
+            background-color: rgba(242, 246, 242, 0.88) !important;
+            border: 1px solid rgba(195, 215, 200, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(40, 70, 50, 0.2) !important;
+        }
+
+        .theme-tangsel2 {
+            background-color: rgba(235, 244, 255, 0.88) !important;
+            border: 1px solid rgba(170, 205, 245, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(20, 60, 110, 0.2) !important;
+        }
+
+        .theme-tagsel-bsd {
+            background-color: rgba(255, 244, 235, 0.88) !important;
+            border: 1px solid rgba(235, 195, 165, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(100, 40, 10, 0.25) !important;
+        }
+    </style>
+</head>
+
+<body class="hometown-page">
+
+    <div class="profile-bg-slideshow">
+        <div class="profile-slide active" data-theme="theme-ikon" style="opacity: 1;">
+            <div class="slide-blur" style="background-image: url('../assets/images/ikon-kota-Tangerang-mobile.jpg');">
+            </div>
+            <div class="slide-img" style="background-image: url('../assets/images/ikon-kota-Tangerang-mobile.jpg');">
+            </div>
+        </div>
+        <div class="profile-slide" data-theme="theme-tangsel1">
+            <div class="slide-blur" style="background-image: url('../assets/images/images (1).jpg');"></div>
+            <div class="slide-img" style="background-image: url('../assets/images/images (1).jpg');"></div>
+        </div>
+        <div class="profile-slide" data-theme="theme-tangsel2">
+            <div class="slide-blur" style="background-image: url('../assets/images/images (2).jpg');"></div>
+            <div class="slide-img" style="background-image: url('../assets/images/images (2).jpg');"></div>
+        </div>
+        <div class="profile-slide" data-theme="theme-tagsel-bsd">
+            <div class="slide-blur" style="background-image: url('../assets/images/tagsel-bsd.jpg');"></div>
+            <div class="slide-img" style="background-image: url('../assets/images/tagsel-bsd.jpg');"></div>
+        </div>
+    </div>
+
+    <div class="profile-bg-overlay"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold fs-4" href="../">MyWebsite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../profile/">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white" href="./">Hometown</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../food/">Food</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../tourist/">Tourist</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-container d-flex align-items-center justify-content-center py-5">
+        <div class="container" style="max-width: 850px;">
+            <div id="hometownCard" class="card profile-card border-0 shadow-lg p-4 p-md-5 theme-ikon">
+                <h1 class="fw-bold mb-2 text-dark profile-title">South Tangerang City</h1>
+                <p class="lead fw-bold mb-3 text-dark">
+                    A <strong>satellite city</strong> and <strong>buffer zone for Jakarta</strong> in <strong>Banten
+                        Province</strong> that is rapidly developing as a <strong>modern residential</strong>,
+                    <strong>business</strong>, and <strong>planned commercial hub</strong>.
+                </p>
+                <hr class="profile-hr my-4 border-dark">
+                <p class="profile-desc text-dark fs-6 leading-relaxed mb-0">
+                    <strong>South Tangerang City</strong> is one of the largest satellite cities in the Greater Jakarta
+                    area and an essential part of <strong>Banten Province</strong>. Known as a <strong>modern
+                        residential area</strong> and a self-sustained <strong>planned business center</strong>, South
+                    Tangerang is growing rapidly into a modern city based on <strong>technology</strong>,
+                    <strong>creative economy</strong>, and <strong>environmentally conscious education</strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const slides = document.querySelectorAll('.profile-slide');
+        const card = document.getElementById('hometownCard');
+        let currentIndex = 0;
+
+        slides.forEach(slide => slide.classList.add('fading'));
+
+        setInterval(() => {
+            slides[currentIndex].classList.remove('active');
+            slides[currentIndex].style.opacity = '';
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+
+            const activeTheme = slides[currentIndex].getAttribute('data-theme');
+            card.className = `card profile-card border-0 shadow-lg p-4 p-md-5 ${activeTheme}`;
+        }, 4000);
+    </script>
+
+</body>
+
+</html>

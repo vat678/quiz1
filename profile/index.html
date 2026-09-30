@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebsite - Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="profile-page">
+
+    <div class="profile-bg-slideshow">
+        <div class="profile-slide active" data-theme="theme-rektora">
+            <div class="slide-blur" style="background-image: url('../assets/images/Kolam-Rektorat-768x512.jpg');"></div>
+            <div class="slide-img" style="background-image: url('../assets/images/Kolam-Rektorat-768x512.jpg');"></div>
+        </div>
+        <div class="profile-slide" data-theme="theme-informatika">
+            <div class="slide-blur" style="background-image: url('../assets/images/MG_1946-2.jpg');"></div>
+            <div class="slide-img" style="background-image: url('../assets/images/MG_1946-2.jpg');"></div>
+        </div>
+    </div>
+
+    <div class="profile-bg-overlay"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold fs-4" href="../">MyWebsite</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white" href="./">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../hometown/">Hometown</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../food/">Food</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="../tourist/">Tourist</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-container d-flex align-items-center justify-content-center py-5">
+        <div class="container" style="max-width: 800px;">
+            <div id="profileCard" class="card profile-card border-0 shadow-lg p-4 p-md-5 theme-rektora">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-4 text-center">
+                        <img src="../assets/images/foto-profil.jpg" alt="Foto Profil Gede Nararya Vatsa"
+                            class="img-fluid profile-img shadow">
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="fw-bold mb-1 profile-title">Gede Nararya Vatsa</h2>
+                        <p class="profile-subtitle mb-3">NRP: 5025251236</p>
+                        <hr class="profile-hr">
+                        <p class="profile-desc">I am an Informatics student with a strong interest in web development,
+                            system analysis, and software technology.</p>
+
+                        <h5 class="fw-bold mt-4 profile-section-title">Pendidikan</h5>
+                        <ul class="profile-list mb-4">
+                            <li>Sepuluh Nopember Institute of Technology (ITS) - Bachelor of Informatics (2025 -
+                                Present)</li>
+                        </ul>
+
+                        <h5 class="fw-bold mt-4 profile-section-title">Keahlian</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary">C/C++</span>
+                            <span class="badge bg-secondary">C#</span>
+                            <span class="badge bg-success">Python</span>
+                            <span class="badge bg-info text-dark">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.profile-slide');
+            const card = document.getElementById('profileCard');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                slides[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % slides.length;
+                slides[currentIndex].classList.add('active');
+
+                const activeTheme = slides[currentIndex].getAttribute('data-theme');
+                card.className = `card profile-card border-0 shadow-lg p-4 p-md-5 ${activeTheme}`;
+            }, 4000);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #0d1117;
+}
+
+.hero-bg-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-bg-slideshow .slide.active {
+    opacity: 1;
+}
+
+.hero-bg-slideshow .slide-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px) brightness(0.6);
+    transform: scale(1.1);
+}
+
+.hero-bg-slideshow .slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+.custom-navbar,
+.hero-banner {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-banner {
+    padding-bottom: 60px;
+}
+
+.main-content {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.profile-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #0d1117;
+}
+
+.profile-bg-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.profile-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.profile-slide.active {
+    opacity: 1;
+}
+
+.profile-slide .slide-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px) brightness(0.6);
+    transform: scale(1.1);
+}
+
+.profile-slide .slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.profile-page .navbar {
+    position: relative;
+    z-index: 3;
+}
+
+.profile-container {
+    flex: 1;
+    position: relative;
+    z-index: 3;
+}
+
+.profile-card {
+    border-radius: 20px;
+    transition: background 1.2s ease-in-out, border-color 1.2s ease-in-out, color 1.2s ease-in-out;
+}
+
+.profile-card.theme-rektora {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    color: #1a202c;
+}
+
+.profile-card.theme-rektora .profile-title {
+    color: #0f172a;
+}
+
+.profile-card.theme-rektora .profile-subtitle {
+    color: #475569;
+}
+
+.profile-card.theme-rektora .profile-hr {
+    border-color: #cbd5e1;
+    opacity: 0.8;
+}
+
+.profile-card.theme-rektora .profile-desc {
+    color: #334155;
+}
+
+.profile-card.theme-rektora .profile-section-title {
+    color: #0f172a;
+}
+
+.profile-card.theme-rektora .profile-list {
+    color: #334155;
+}
+
+.profile-card.theme-informatika {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff;
+}
+
+.profile-card.theme-informatika .profile-title {
+    color: #ffffff;
+}
+
+.profile-card.theme-informatika .profile-subtitle {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.profile-card.theme-informatika .profile-hr {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-card.theme-informatika .profile-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-card.theme-informatika .profile-section-title {
+    color: #ffffff;
+}
+
+.profile-card.theme-informatika .profile-list {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 16px !important;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+}
